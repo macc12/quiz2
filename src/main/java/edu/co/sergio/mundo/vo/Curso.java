@@ -12,10 +12,25 @@ import java.util.ArrayList;
  * @author Labing
  */
 public class Curso {
+
     private double codigo;
     private String nombre;
     private Profesor profesor;
     private ArrayList<Estudiante> cursos;
+    private double nota;
+    private String semestre;
+
+    public Curso() {
+    }
+
+    public Curso(double codigo, String nombre, Profesor profesor, ArrayList<Estudiante> cursos, double nota, String semestre) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.profesor = profesor;
+        this.cursos = cursos;
+        this.nota = nota;
+        this.semestre = semestre;
+    }
 
     public double getCodigo() {
         return codigo;
@@ -49,16 +64,20 @@ public class Curso {
         this.cursos = cursos;
     }
 
-    public Curso() {
+    public double getNota() {
+        return nota;
     }
 
-    public Curso(double codigo, String nombre, Profesor profesor, ArrayList<Estudiante> cursos) {
-        this.codigo = codigo;
-        this.nombre = nombre;
-        this.profesor = profesor;
-        this.cursos = cursos;
+    public void setNota(double nota) {
+        this.nota = nota;
     }
-    
-    
-    
+
+    public String getSemestre() {
+        return semestre;
+    }
+
+    public void setSemestre(String semestre) {
+        this.semestre = semestre;
+    }
+
 }
